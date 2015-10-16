@@ -15,7 +15,7 @@ RUN set -x \
     && chmod -R 700            "${CROWD_HOME}" \
     && chown -R daemon:daemon  "${CROWD_HOME}" \
     && mkdir -p                "${CROWD_INSTALL}/conf/Catalina" \
-    && curl -Ls                "https://www.atlassian.com/software/crowd/downloads/binary/atlassian-crowd-${CROWD_VERSION}.tar.gz" | tar -xz --directory "${CROWD_INSTALL}" --strip-components=1 --no-same-owner \
+    && curl -Ls                "https://www.atlassian.com/software/crowd/downloads/binary/atlassian-crowd-${CROWD_VERSION}.tar.gz" | tar -xz --directory "${CROWD_INSTALL}" --strip-components=1 --no-same-owner
     #&& curl -Ls                "https://jdbc.postgresql.org/download/postgresql-9.4-1204.jdbc42.jar" -o "${CROWD_INSTALL}/lib/postgresql-9.4-1204.jdbc42.jar" 
 
 RUN chmod -R 700            "${CROWD_INSTALL}/conf" \
