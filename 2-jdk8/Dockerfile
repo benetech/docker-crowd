@@ -46,7 +46,7 @@ VOLUME ["/var/local/atlassian/crowd"]
 WORKDIR ${CROWD_HOME}
 
 # copy db config file into place
-COPY dbconfig.xml ${CROWD_HOME}/dbconfig.xml
+#COPY dbconfig.xml ${CROWD_HOME}/dbconfig.xml
 
 # Run Atlassian CROWD as a foreground process by default.
 CMD ["/usr/local/atlassian/crowd/bin/start-crowd.sh", "-fg"]
